@@ -3,8 +3,7 @@ This application lists services or businesses close to your location based on th
 
 This example is the result of 'cake' and the affordable tab is selected :
 
-<img src="./src/images/findaspot.gif" style="width: 280px; height:553px; border-radius:45px; margin-bottom:10px"/>
-
+(https://github.com/MariekieCoetzee/FindASpot/blob/master/src/images/FindASpot.gif)
 Simply search for a service, food craving or business.  The results will be returned in a beautiful animated ui grouped by affordability.
 
 <img src="./src/images/FASSearchDemo.png" style="width: 280px; height:553px; border-radius:45px; margin-bottom:10px"/>
