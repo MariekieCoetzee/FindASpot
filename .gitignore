@@ -1,5 +1,8 @@
 node_modules/**/*
 .expo/*
+.expo-shared/*
+__tests__/*
+info.plist
 npm-debug.*
 *.jks
 *.p8
@@ -8,6 +11,15 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-
+.idea
+.env
+.gitignore
 # macOS
 .DS_Store
+ios/**/*
+
+# android
+android/**/*
+
+# exclude secrets
+.env

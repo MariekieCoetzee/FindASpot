@@ -1,32 +1,31 @@
 {
   "expo": {
-    "name": "FindASpot",
+    "name": "Find a Spot!",
     "slug": "FindASpot",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/images/FASIcon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/images/FASIcon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/images/FASwelcome.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.mariekiecoetzee.FindASpot"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/images/FASIcon.png"
     }
   }
 }
