@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: 10,
     marginLeft:5,
-    //padding: 10,
     color: "black",
   },
   iconStyle: {
