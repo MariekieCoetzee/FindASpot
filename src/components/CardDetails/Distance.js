@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Stylesheet, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const Distance = ({ item }) => {
