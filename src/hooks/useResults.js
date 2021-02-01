@@ -12,7 +12,6 @@ export default () => {
   const searchApi = async (searchTerm, searchLocation) => {
     setErrorMessage(null);
     setResults([]);
-   // console.log(searchLocation);
     if (!searchLocation) {
       setErrorMessage(
         "Location is missing. Please ensure that permission is granted to device location"
@@ -28,14 +27,34 @@ export default () => {
           longitude: searchLocation.longitude,
           radius: 10000,
         },
+      }).catch(function (error) {
+        console.log('inside catch block.');
+        if (error.response) {
+          setResults([]);
+          setErrorMessage("Something went wrong, Please search again.");
+        } else if (error.request) {
+          etResults([]);
+          setErrorMessage("Something went wrong, Please search again.");
+        } else {
+          setResults([]);
+          setErrorMessage("Something went wrong, Please search again.");
+        }
+        console.log(JSON.stringify(error));
       });
       //no data
+      if(!response.data){
+        setResults([]);
+        setErrorMessage("Something went wrong, Please search again.");
+      }else if(!response.data.businesses) {
+        setResults([]);
+        setErrorMessage("Something went wrong, Please search again.");
+      } else 
       if (response.data.businesses.length === 0) {
         setResults([]);
         setErrorMessage("No matches found...");
         return [searchApi, results, errorMessage, searchLocation];
       }
-
+  
       //data found - create group per price
       const groupList = helpers.groupResults(response.data.businesses);
 

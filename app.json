@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./src/images/FASIcon.png",
     "splash": {
-      "image": "./src/images/FASIcon.png",
+      "image": "./src/images/FindASpot.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/images/FASwelcome.png",
+        "foregroundImage": "./src/images/FASIcon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.mariekiecoetzee.FindASpot"

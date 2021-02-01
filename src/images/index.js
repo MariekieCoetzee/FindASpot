@@ -1,7 +1,7 @@
-export const FindASpotImage = require("./FindASpot.png");
+import { createPortal } from "react-dom";
+
 export const FASBackDrop = require("./FASBackDrop.png");
-export const FASsplash = require("./FASsplash.png");
-export const FASwelcome = require("./FASwelcome.png");
+export const FindASpotWelcome = require("./FindASpot.png");
 export const androidZeroStar = require("./YelpStars/android/small_0.png");
 export const androidOneStar = require("./YelpStars/android/small_1.png");
 export const androidOneHalfStar = require("./YelpStars/android/small_1_half.png");

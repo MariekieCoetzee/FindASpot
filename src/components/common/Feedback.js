@@ -14,23 +14,23 @@ const { width, height } = Dimensions.get("screen");
 const Feedback = ({ type, message, info }) => {
   return (
     <ImageBackground source={FASBackDrop} style={{ width, height }}>
-      <View style={styles.messageBoxStyle}>
-        {type === "load" && (
+      {type === "load" && (
+        <View style={styles.indicatorBoxStyle}>
           <ActivityIndicator
-            style={{
-              alignSelf: "center",
-              marginLeft: width / 2.8,
-              marginBottom: 15,
-            }}
+            style={styles.indicatorStyle}
             color="#000"
             size="large"
           />
-        )}
+        </View>
+      )}
+      {type !=="load" && (
+      <View style={styles.messageBoxStyle}>
         {type !== "load" && (
           <Text style={styles.messageStyle}> {message} </Text>
         )}
-        {info ? <Text style={styles.infoStyle}> {info} </Text> : null}
-      </View>
+        {info && (
+        <Text style={styles.infoStyle}> {info} </Text>)}
+      </View>)}
     </ImageBackground>
   );
 };
@@ -40,10 +40,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fffdf8",
     height,
   },
-  messageBoxStyle: {
-    position: "absolute",
-    backgroundColor: "rgba(255,255,255,0.7)",
-
+  indicatorStyle: {
+    alignSelf: "center",
+    marginBottom: 15,
+  },
+  indicatorBoxStyle: {
     marginTop: 200,
     marginLeft: 15,
     marginRight: 15,
@@ -52,11 +53,24 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  messageBoxStyle: {
+    position: "absolute",
+    backgroundColor: "rgba(255,255,255,0.7)",
+    marginTop: 200,
+    marginLeft: 15,
+    marginRight: 15,
+    borderRadius: 10,
+    alignSelf:"center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   messageStyle: {
     fontSize: 25,
     marginLeft: 10,
     flex: 1,
+    alignSelf:"center",
     color: "#333333",
+    textAlign:"center",
     fontWeight: "400",
   },
   infoStyle: {
