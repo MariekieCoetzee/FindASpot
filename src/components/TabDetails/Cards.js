@@ -21,11 +21,12 @@ const SPACING = 10;
 const SPACER_ITEM_SIZE = (width - ITEM_SIZE) / 2;
 
 const Cards = ({ items }) => {
+  // sorting toggles, workaround to enforce ascending distance order
+  items.sort((a, b) => { return parseFloat(b.distance) - parseFloat(a.distance) });
   const scrollX = useRef(new Animated.Value(0)).current;
   return (
     <View style={styles.container}>
       <BackDrop data={items} scrollX={scrollX} />
-      <StatusBar hidden />
       <Animated.FlatList
         horizontal
         data={items}
